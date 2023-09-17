@@ -26,7 +26,7 @@
 	console.log(import.meta.env);
 
 	const key = process.env.API_KEY
-	const token = process.env.API_KEY;
+	const token = process.env.API_TOKEN;
 
 	const buscarCard = async () => {
 		// ID do card que você deseja acessar
