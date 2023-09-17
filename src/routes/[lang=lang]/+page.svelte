@@ -23,10 +23,13 @@
 	
 	let year = new Date().getFullYear()
 
-	const key = import.meta.env.VITE_TAK;
-  	const token = import.meta.env.VITE_TAT;
+	const key = import.meta.env.TRELLO_API_KEY;
+  	const token = import.meta.env.TRELLO_ACCESS_TOKEN;
 
 	const buscarCard = async () => {
+
+		console.log("lucas");
+		console.log(import.meta.env);
 		// ID do card que você deseja acessar
 		const cardId: string = '6011a5847c73cf217c7a963b';
 
@@ -42,6 +45,8 @@
 		console.error('Erro ao buscar o card:', error);
 		}
 	};
+
+	
 
 	
 
