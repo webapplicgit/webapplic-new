@@ -25,7 +25,8 @@
 	
 	console.log(import.meta.env);
 
-	const key = import.meta.env.VITE_API_KEY;
+	const key = process.env.API_KEY
+	const token = process.env.API_KEY;
 
 	const buscarCard = async () => {
 		// ID do card que você deseja acessar
