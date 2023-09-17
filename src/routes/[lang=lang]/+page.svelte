@@ -23,8 +23,8 @@
 	
 	let year = new Date().getFullYear()
 
-	const key: string = import.meta.env.VITE_TAK;
-  	const token: string = import.meta.env.VITE_TAT;
+	const key = import.meta.env.VITE_TAK;
+  	const token = import.meta.env.VITE_TAT;
 
 	const buscarCard = async () => {
 		// ID do card que você deseja acessar
