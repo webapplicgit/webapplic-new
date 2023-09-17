@@ -22,6 +22,30 @@
 
 	
 	let year = new Date().getFullYear()
+
+	const key: string = import.meta.env.VITE_TAK;
+  	const token: string = import.meta.env.VITE_TAT;
+
+	const buscarCard = async () => {
+		// ID do card que você deseja acessar
+		const cardId: string = '6011a5847c73cf217c7a963b';
+
+		try {
+		const response = await fetch(`https://api.trello.com/1/cards/${cardId}?key=${key}&token=${token}`);
+		const data = await response.json();
+
+		const conteudoCard: HTMLElement | null = document.getElementById('conteudoCard');
+		if (conteudoCard) {
+			conteudoCard.innerHTML = `<h2>${data.name}</h2><p>${data.desc}</p>`;
+		}
+		} catch (error) {
+		console.error('Erro ao buscar o card:', error);
+		}
+	};
+
+	
+
+
 </script>
 
 <section class="text-gray-600 body-font bg-gradient-to-t from-sky-400 to-sky-800">
@@ -185,7 +209,9 @@
 		<h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">Perguntas frequentes</h1>
 	  </div>
 	  
-
+	  <h1>Conteúdo do Card Trello</h1>
+	  <button on:click={buscarCard} id="buscarCard">Buscar Card</button>
+	  <div id="conteudoCard"></div>
 		
 </section>
 
