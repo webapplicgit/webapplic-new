@@ -25,8 +25,8 @@
 	
 	console.log(import.meta.env);
 
-	const key = process.env.API_KEY
-	const token = process.env.API_TOKEN;
+	const key = import.meta.env.VITE_API_KEY
+	const token = import.meta.env.VITE_API_TOKEN;
 
 	const buscarCard = async () => {
 		// ID do card que você deseja acessar
@@ -211,11 +211,6 @@
 	  <h1>Conteúdo do Card Trello</h1>
 	  <button on:click={buscarCard} id="buscarCard">Buscar Card</button>
 	  <div id="conteudoCard"></div>
-
-	  <p>API Key: {key}</p>
-	
-	  
-		
 </section>
 
 <!-- <h2>
