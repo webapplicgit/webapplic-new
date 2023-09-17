@@ -21,7 +21,7 @@ type RootTranslation = {
 	 */
 	title: RequiredParams<'year'>
 	/**
-	 * C​u​s​t​o​m​ ​L​a​n​d​i​n​g​ ​P​a​g​e​s
+	 * C​u​s​t​o​m​ ​L​a​n​d​i​n​g​ ​P​a​g​e​s​g​i​t​ 
 	 */
 	snippet_title: string
 	/**
@@ -57,7 +57,7 @@ export type TranslationFunctions = {
 	 */
 	title: (arg: { year: number }) => LocalizedString
 	/**
-	 * Custom Landing Pages
+	 * Custom Landing Pagesgit 
 	 */
 	snippet_title: () => LocalizedString
 	/**
