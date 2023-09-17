@@ -23,10 +23,12 @@
 	
 	let year = new Date().getFullYear()
 
+	console.log('lucas:')
+	console.log(import.meta.env);
+
 	const key = import.meta.env.VITE_TRELLO_API_KEY;
   	const token = import.meta.env.TRELLO_ACCESS_TOKEN;
 	const apiKey = import.meta.env.VITE_API_KEY;
-	const apiKey2 = import.meta.env.API_KEY;
 
 	const buscarCard = async () => {
 		// ID do card que você deseja acessar
@@ -212,11 +214,7 @@
 	  <button on:click={buscarCard} id="buscarCard">Buscar Card</button>
 	  <div id="conteudoCard"></div>
 
-	  <p>API Key: {apiKey}</p>
-	  <p>API Key2: {apiKey2}</p>
-	
-	  
-		
+	  <p>API Key: {apiKey}</p>		
 </section>
 
 <!-- <h2>
